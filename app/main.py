@@ -48,3 +48,9 @@ app.add_middleware(
 
 app.include_router(health_router)
 app.include_router(user_router)
+
+@app.get("/")
+async def root():
+    return {
+        "Welcome to AIUtility!"
+    }
